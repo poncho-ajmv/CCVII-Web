@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .light {
+    background-color: #ffffff;
+    color: #1a1a1a;
+  }
+  
+  .dark {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  /* Header principal */
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: center; /* CENTRA el texto */
+    align-items: center;
+    background-color: inherit;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  }
+  
+  /* Botones ← → a la izquierda */
+  .nav-buttons {
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .nav-buttons button {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid currentColor;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .nav-buttons button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  /* Botón modo claro/oscuro a la derecha */
+  button.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    color: inherit;
+    border: 1px solid currentColor;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Área de lectura */
+  main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+  }
+
+  button.home-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
