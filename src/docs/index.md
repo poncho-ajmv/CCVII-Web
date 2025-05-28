@@ -33,12 +33,10 @@
 ## 5. Manejo de Interrupciones
 - [Manejador de Timer IRQ](7_Manejo_Interrupciones/7.1_Handler_TimerIRQ.md)
 - [Guardado de Registros](7_Manejo_Interrupciones/7.2_Guardado_Registros.md)
-- [Deshabilitación de Interrupciones](7_Manejo_Interrupciones/7.3_Deshabilitacion_Interrupciones.md)
 
 ## 6. Bibliotecas del Sistema
 - [Funciones de E/S](8_Bibliotecas_Sistema/8.1_IO.md)
-- [Manipulación de Cadenas](8_Bibliotecas_Sistema/8.2_String.md)
-- [Abstracciones para Procesos](8_Bibliotecas_Sistema/8.3_Abstracciones.md)
+- [Puntos de entrada](8_Bibliotecas_Sistema/8.2_String.md)
 
 ## 7. Enlazado y Compilación
 - [Script de Construcción](9_Enlazado_Compilacion/9.1_Script_Construccion.md)
@@ -53,8 +51,5 @@
 
 
 
-- [Introducción](introduccion.md)
-- [ARM Cortex-A8 Characteristics](ARMCortex-A8Characteristics.md)
-- [Creditos](creditos.md)
 - [Guia poncho](Usar.md)
 

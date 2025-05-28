@@ -6,7 +6,7 @@ Este documento describe el desarrollo de un sistema operativo educativo, impleme
 > 📅 **Última actualización:** mayo de 2025
 
 ---
-El proyecto implementa un sistema operativo mínimo con soporte de multiprogramación, ejecutado en un entorno *bare-metal*, sin unidad de gestión de memoria (MMU). Su diseño modular permite gestionar múltiples procesos de usuario mediante planificación Round-Robin, ejecutando cada uno en intervalos regulares de tiempo (1 segundo), definidos por interrupciones del temporizador DMTimer2.
+El proyecto implementa un sistema operativo mínimo con soporte de multiprogramación, ejecutado en un entorno *bare-metal*, sin unidad de gestión de memoria (MMU). Su diseño modular permite gestionar múltiples procesos de usuario mediante planificación Round-Robin, ejecutando cada uno en intervalos regulares de tiempo llamados quantums, el valor del quantum por defecto es 1 segundo, pero este puede ser modificado, el quantum define el tiempo entre cada interrupción del temporizador DMTimer2.
 
 El núcleo del sistema se encarga de la inicialización de hardware esencial (UART, temporizador, controlador de interrupciones), la gestión de procesos y el cambio de contexto. Cada proceso de usuario cuenta con una pila independiente y se ejecuta desde una dirección de memoria fija, definida mediante scripts de enlace, asegurando aislamiento y estabilidad.
 
