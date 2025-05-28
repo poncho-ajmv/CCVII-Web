@@ -48,6 +48,15 @@ function App() {
       <main>
         <MarkdownViewer file={currentDoc} onNavigate={navigateTo} />
       </main>
+      <footer className="footer">
+       <a href="https://github.com/ErnestoAragon03/CCVII" target="_blank" rel="noopener noreferrer">Repo</a>·
+        <span>Created by ·</span>
+        <a href="https://github.com/ErnestoAragon03" target="_blank" rel="noopener noreferrer">Ernesto</a> ·
+        <a href="https://github.com/ChristianSosa22" target="_blank" rel="noopener noreferrer">Christian</a> ·
+        <a href="https://github.com/poncho-ajmv" target="_blank" rel="noopener noreferrer">Poncho</a> ·
+        <span>· May 2025</span>
+      </footer>
+
     </div>
   );
 }
