@@ -2,15 +2,23 @@ import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
+// Cargar todos los archivos Markdown de la carpeta docs y subcarpetas
+const context = require.context('../docs', true, /\.md$/);
+
 function MarkdownViewer({ file, onNavigate }) {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    import(`../docs/${file}`).then(res => {
-      fetch(res.default)
-        .then(r => r.text())
+    const trimmedFile = `./${file.trim()}`;
+    try {
+      const markdownFile = context(trimmedFile);
+      fetch(markdownFile)
+        .then(res => res.text())
         .then(setContent);
-    });
+    } catch (err) {
+      console.error('Archivo Markdown no encontrado:', trimmedFile, err);
+      setContent(`# Error\n\nNo se pudo cargar el archivo **${file}**.`);
+    }
   }, [file]);
 
   const CodeBlock = ({ node, inline, className, children, ...props }) => {
